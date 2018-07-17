@@ -4,7 +4,7 @@
             <div class="sidebar-sticky">
                 <ul class="nav flex-column">
                     <!--Item!-->
-                    <h6 class="sidebar-heading text-muted">
+                    <h6 class="sidebar-heading text-muted d-flex px-3">
                         <span>Pengolahan Sewa</span>
                     </h6>
                     <div class="list-group text-left">

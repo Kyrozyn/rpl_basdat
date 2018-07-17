@@ -26,4 +26,7 @@ cekRole("pemilik");
     </div>
     <!--end tengah!-->
 </div>
+<!-- Footer -->
+
+<!-- Footer -->
 </body>
