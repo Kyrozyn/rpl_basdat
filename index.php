@@ -59,6 +59,7 @@ if (isset($_POST['uname']) AND isset($_POST['pass'])) {
         $_SESSION['username'] = $username;
         $_SESSION['role'] = (string)$role;
         echo "<script>window.location = window.location.href</script>";
+        cekRedirect();
     }
     else{
         echo "<div style='margin-bottom:-55px' class='alert alert-danger' role='alert'><span class='fa fa-warning-sign'></span>  Login Gagal !! Username dan Password Salah !!</div>";
