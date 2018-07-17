@@ -73,43 +73,44 @@ cekRole("pemilik");
             <div class="modal-header">
                 <h4 class="modal-title">Tambah</h4>
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-            </div><div class="form-group">
-                <label for="No_Pol">Nomor Polisi</label>
-                <input type="text" class="form-control" name="No_Pol">
-            </div>
-            <div class="form-group">
-                <label for="Merk">Merk Mobil</label>
-                <input type="text" class="form-control" name="Merk">
-            </div>
-            <div class="form-group">
-                <label for="Tahun_Buat">Tahun Buat</label>
-                <input type="text" class="form-control" name="Tahun_Buat">
-            </div>
-            <div class="form-group">
-                <label for="Bahan_Bakar">Bahan Bakar</label>
-                <select class="form-control" name="Bahan_Bakar">
-                    <option value="Pertamax">Pertamax</option>
-                    <option value="Pertalite">Pertalite</option>
-                    <option value="Premium">Premium</option>
-                    <option value="Solar">Solar</option>
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="Warna">Warna</label>
-                <input type="text" class="form-control" name="Warna">
-            </div>
-            <div class="form-group">
-                <label for="Isi_Silinder">Isi Silinder</label>
-                <input type="text" class="form-control" name="Isi_Silinder">
-            </div>
-            <div class="form-group">
-                <label for="Harga_Sewa">Harga Sewa</label>
-                <input type="text" class="form-control" name="Harga_Sewa">
             </div>
 
             <!-- Modal body -->
             <form method="post" action="">
             <div class="modal-body text-left">
+                <div class="form-group">
+                    <label for="No_Pol">Nomor Polisi</label>
+                    <input type="text" class="form-control" name="No_Pol">
+                </div>
+                <div class="form-group">
+                    <label for="Merk">Merk Mobil</label>
+                    <input type="text" class="form-control" name="Merk">
+                </div>
+                <div class="form-group">
+                    <label for="Tahun_Buat">Tahun Buat</label>
+                    <input type="text" class="form-control" name="Tahun_Buat">
+                </div>
+                <div class="form-group">
+                    <label for="Bahan_Bakar">Bahan Bakar</label>
+                    <select class="form-control" name="Bahan_Bakar">
+                        <option value="Pertamax">Pertamax</option>
+                        <option value="Pertalite">Pertalite</option>
+                        <option value="Premium">Premium</option>
+                        <option value="Solar">Solar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Warna">Warna</label>
+                    <input type="text" class="form-control" name="Warna">
+                </div>
+                <div class="form-group">
+                    <label for="Isi_Silinder">Isi Silinder</label>
+                    <input type="text" class="form-control" name="Isi_Silinder">
+                </div>
+                <div class="form-group">
+                    <label for="Harga_Sewa">Harga Sewa</label>
+                    <input type="text" class="form-control" name="Harga_Sewa">
+                </div>
             </div>
             <!-- Modal footer -->
             <div class="modal-footer">
