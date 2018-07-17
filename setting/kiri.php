@@ -9,8 +9,8 @@
                     </h6>
                     <div class="list-group text-left">
                         <a class="list-group-item" href="mobil.php"><i class="fa fa-car fa-fw" aria-hidden="true"></i>&nbsp; Data Kendaraan</a>
-                        <a class="list-group-item" href="#"><i class="fa fa-id-card-o fa-fw" aria-hidden="true"></i>&nbsp; Data Driver</a>
-                        <a class="list-group-item" href="#"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>&nbsp; Data Customer</a>
+                        <a class="list-group-item" href="driver.php"><i class="fa fa-id-card-o fa-fw" aria-hidden="true"></i>&nbsp; Data Driver</a>
+                        <a class="list-group-item" href="customer.php"><i class="fa fa-user-circle-o fa-fw" aria-hidden="true"></i>&nbsp; Data Customer</a>
                         <a class="list-group-item" href="#"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp; Data Sewa</a>
                     </div>
                     <!--!-->
@@ -19,7 +19,7 @@
                         <span>Pengolahan Pegawai</span>
                     </h6>
                     <div class="list-group text-left">
-                        <a class="list-group-item" href="#"><i class="fa fa-child fa-fw" aria-hidden="true"></i>&nbsp; Data Pegawai</a>
+                        <a class="list-group-item" href="pegawaidata.php"><i class="fa fa-child fa-fw" aria-hidden="true"></i>&nbsp; Data Pegawai</a>
                     </div>
                     <!--!-->
                     <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">

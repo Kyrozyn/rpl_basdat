@@ -45,8 +45,8 @@ cekRole("pemilik");
                         <td><?php echo $kd['Tahun_Buat']; ?></td>
                         <td><?php echo $kd['Bahan_Bakar'];?></td>
                         <td><?php echo $kd['Warna']; ?></td>
-                        <td><?php echo $kd['Isi_Silinder']; ?> cc</td>
-                        <td>Rp. <?php echo $kd['Harga_Sewa'];?></td>
+                        <td><?php echo $kd['Isi_Silinder']; ?>cc</td>
+                        <td>Rp. <?php echo number_format($kd['Harga_Sewa'])?>,-</td>
                         <td>
                             <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??')";>
                                 <input type="hidden" name="delete_nopol" value="<?php echo $kd['No_Pol']; ?>">
