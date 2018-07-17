@@ -1,4 +1,5 @@
 <?php
+echo "Ini situs kontoru...";
 echo "Ini situs pemilik...";
 include "setting/head.php";
 include "setting/cekredirect.php";
