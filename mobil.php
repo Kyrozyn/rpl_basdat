@@ -20,7 +20,7 @@ cekRole("pemilik");
     <!-- Tengah !-->
     <div class="col-sm-10 text-left">
         <h1 class="text-center">Data Kendaraan</h1>
-        <table id="mobil" class="display" style="width:100%">
+        <table id="mobil" class="display table-striped table-bordered" style="width:100%">
             <thead>
             <tr>
                 <th>No. Polisi</th>
@@ -30,11 +30,12 @@ cekRole("pemilik");
                 <th>Warna</th>
                 <th>Isi Silinder</th>
                 <th>Harga Sewa</th>
+                <th>Aksi</th>
             </tr>
             </thead>
             <tbody>
                 <?php
-                $kendaraan = $db->select("kendaraan","*");
+                $kendaraan = $db->select("kendaraan","*",["hapus" => false]);
                 foreach ($kendaraan as $kd){
                     ?>
                     <tr>
@@ -45,6 +46,11 @@ cekRole("pemilik");
                         <td><?php echo $kd['Warna']; ?></td>
                         <td><?php echo $kd['Isi_Silinder']; ?></td>
                         <td><?php echo $kd['Harga_Sewa'];?></td>
+                        <td>
+                            <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??')";>
+                                <input type="hidden" name="delete_nopol" value="<?php echo $kd['No_Pol']; ?>">
+                                <button type="submit" class="btn btn-danger fa fa-trash-o"></button></a>
+                            </form></td>
                     </tr>
                     <?php
                 }
@@ -57,3 +63,17 @@ cekRole("pemilik");
 
 <!-- Footer -->
 </body>
+<?php
+//untuk hapus
+    if(ISSET($_POST['delete_nopol'])){
+        $hapus = $db->update("kendaraan",["hapus" => true],["No_Pol" => $_POST['delete_nopol']]);
+        if($hapus) {
+            unset ($_POST['delete_nopol']);
+            echo "<script> alert('Data berhasil dihapus'); window.location = window.location.href;</script>";
+
+        }
+        else{
+            unset ($_POST['delete_nopol']);
+            echo "<script> alert('Data gagal dihapus'); window.location = window.location.href; </script>";
+        }
+    }
