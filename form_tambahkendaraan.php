@@ -15,10 +15,10 @@ cekRole("pemilik");
     <!--!-->
     <!-- Tengah !-->
     <div class="col-sm-10 text-left">
-        <h1 class="text-center">Tambah Data</h1>
+        <h1 class="text-center">Tambah Data Kendaraan</h1>
         <form action="/action_page.php">
             <div class="form-group">
-                <label for="No_Pol">Nomor Polisi:</label>
+                <label for="No_Pol">Nomor Polisi</label>
                 <input type="text" class="form-control" name="No_Pol">
             </div>
             <div class="form-group">
