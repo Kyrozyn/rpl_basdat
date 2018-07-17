@@ -3,6 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/vendor/catfan/medoo" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/cloudinary/cloudinary_php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -11,10 +12,12 @@
       <library name="PHP" type="php">
         <CLASSES>
           <root url="file://$MODULE_DIR$/vendor/catfan/medoo" />
+          <root url="file://$MODULE_DIR$/vendor/cloudinary/cloudinary_php" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/catfan/medoo" />
+          <root url="file://$MODULE_DIR$/vendor/cloudinary/cloudinary_php" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
         </SOURCES>
       </library>
