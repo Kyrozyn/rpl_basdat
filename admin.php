@@ -1,6 +1,10 @@
 <?php
+<<<<<<< HEAD
 echo "Ini situs kontoru...";
 echo "Ini situs pemilik...";
+=======
+//echo "Ini situs pemilik...";
+>>>>>>> c35274de5302281588fab46535e4ff015154f19e
 include "setting/head.php";
 include "setting/cekredirect.php";
 echo "role = ".$_SESSION['role']."<br>";
