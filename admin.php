@@ -1,5 +1,5 @@
 <?php
-echo "Ini situs pemilik...";
+//echo "Ini situs pemilik...";
 include "setting/head.php";
 include "setting/cekredirect.php";
 echo "role = ".$_SESSION['role']."<br>";
