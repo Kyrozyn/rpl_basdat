@@ -4,6 +4,7 @@ include "setting/cekredirect.php";
 echo "role = " . $_SESSION['role'] . "<br>";
 cekRole("pemilik");
 ?>
+
 <body>
 <!-- Atas !-->
 <?php include "setting/atas.php" ?>
