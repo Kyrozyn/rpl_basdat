@@ -48,10 +48,10 @@ cekRole("pemilik");
                         <td><?php echo $kd['Isi_Silinder']; ?>cc</td>
                         <td>Rp. <?php echo number_format($kd['Harga_Sewa'])?>,-</td>
                         <td>
-                            <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??')";>
+                            <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??');" style="padding-top: 13px" >
                                 <input type="hidden" name="delete_nopol" value="<?php echo $kd['No_Pol']; ?>">
-                                <button type="submit" class="btn btn-danger fa fa-trash-o"></button></a>
-                            </form><a href="form_editkendaraan.php?no_pol=<?php echo $kd['No_Pol']; ?>" class="btn btn-secondary fa fa-edit"></a> </td>
+                                <button type="submit" class="btn btn-danger fa fa-trash-o"></button>
+                                <a href="form_editkendaraan.php?no_pol=<?php echo $kd['No_Pol']; ?>" class="btn btn-secondary fa fa-edit"></a>
                     </tr>
                     <?php
                 }
