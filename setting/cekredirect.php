@@ -23,4 +23,20 @@ function cekRole($a)
             echo "<script>window.location = 'error.php'</script>";
         }
     }
+    if ($a == "pegawai") {
+        if ($sess == "pegawai") {
+
+        }
+        else{
+            echo "<script>window.location = 'error.php'</script>";
+        }
+    }
+    if ($a == "mix") {
+        if ($sess == "pegawai" OR $sess == "pegawai") {
+
+        }
+        else{
+            echo "<script>window.location = 'error.php'</script>";
+        }
+    }
 }

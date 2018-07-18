@@ -2,7 +2,7 @@
 include "setting/head.php";
 include "setting/cekredirect.php";
 echo "role = " . $_SESSION['role'] . "<br>";
-cekRole("pemilik");
+cekRole("mix");
 ?>
 <script>
     $(document).ready(function() {
