@@ -54,8 +54,60 @@ cekRole("pemilik");
                 }
                 ?>
             </tbody>
+        </table>
+        <div class="col-sm-1"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#tambah">
+                Tambah Data
+            </button></div>
     </div>
     <!--end tengah!-->
+</div>
+<!-- The Modal -->
+<div class="modal fade" id="tambah">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Tambah Data Customer</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal Body -->
+            <form method="post" action="">
+            <div class="modal-body text-left">
+                <div class="form-group">
+                    <label for="id_pelanggan">ID Pelanggan</label>
+                    <input type="text" class="form-control" name="id_pelanggan">
+                </div>
+                <div class="form-group">
+                    <label for="nama">Nama Pelanggan</label>
+                    <input type="text" class="form-control" name="nama">
+                </div>
+                <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <input type="text" class="form-control" name="alamat">
+                </div>
+                <div class="form-group">
+                    <label for="no_ktp">Nomor KTP</label>
+                    <input type="text" class="form-control" name="no_ktp">
+                </div>
+                <div class="form-group">
+                    <label for="tanggal_lahir">Tanggal Lahir</label>
+                    <input type="date" class="form-control" name="tanggal_lahir">
+                </div>
+                <div class="form-group">
+                    <label for="no_telp">Nomor Telepon</label>
+                    <input type="text" class="form-control" name="no_telp">
+                </div>
+            </div>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary" value="tambah">Submit</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
 </div>
 <!-- Footer -->
 
@@ -73,5 +125,30 @@ cekRole("pemilik");
         else{
             unset ($_POST['delete_customer']);
             echo "<script> alert('Data gagal dihapus'); window.location = window.location.href; </script>";
+        }
+    }
+    if(ISSET($_POST['id_pelanggan'])){
+        $id_pelanggan = $_POST['id_pelanggan'];
+        $nama = $_POST['nama'];
+        $alamat = $_POST['alamat'];
+        $no_ktp = $_POST['no_ktp'];
+        $tanggal_lahir = $_POST['tanggal_lahir'];
+        $no_telp = $_POST['no_telp'];
+        $data =
+            [   "id_pelanggan"=>$id_pelanggan,
+                "nama"=>$nama,
+                "alamat"=>$alamat,
+                "no_ktp"=>$no_ktp,
+                "tanggal_lahir"=>$tanggal_lahir,
+                "no_telp"=>$no_telp
+            ];
+        $Masuk = $db->insert("customer", $data);
+        if($Masuk) {
+            unset ($_POST);
+            echo "<script> alert('Data berhasil ditambahkan!'); window.location = window.location.href;</script>";
+        }
+        else {
+            unset ($_POST);
+            echo "<script>alert('Data gagal ditambahkan:(!'); window.location = window.location.href;</script>";
         }
     }

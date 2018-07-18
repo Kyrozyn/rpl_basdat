@@ -50,7 +50,7 @@ if(ISSET($_POST['No_Pol'])){
     <!--!-->
     <!-- Tengah !-->
     <div class="col-sm-10 text-left">
-        <h1 class="text-center">Edit Data</h1>
+        <h1 class="text-center">Edit Data Kendaraan</h1>
         <form action="" method="post">
             <div class="form-group">
                 <label for="No_Pol">Nomor Polisi:</label>
