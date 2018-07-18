@@ -105,7 +105,7 @@ cekRole("pemilik");
         </div>
     </div>
 </div>
-
+<!-- Footer -->
 
 <!-- Footer -->
 </body>

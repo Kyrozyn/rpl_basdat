@@ -45,10 +45,12 @@ cekRole("mix");
                         <td><?php echo $c['tanggal_lahir'];?></td>
                         <td><?php echo $c['no_telp']; ?></td>
                         <td>
-                            <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??')";>
+                            <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??');" style="padding-top: 13px">
                                 <input type="hidden" name="delete_customer" value="<?php echo $c['id_pelanggan']; ?>">
-                                <button type="submit" class="btn btn-danger fa fa-trash-o"></button></a>
-                            </form></td>
+                                <button type="submit" class="btn btn-danger fa fa-trash-o"></button>
+                                <a href="form_editcustomer.php?id_pelanggan=<?php echo $c['id_pelanggan']; ?>" class="btn btn-secondary fa fa-edit"></a>
+                            </form>
+                        </td>
                     </tr>
                     <?php
                 }
