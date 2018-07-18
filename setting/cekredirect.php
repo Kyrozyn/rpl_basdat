@@ -32,7 +32,7 @@ function cekRole($a)
         }
     }
     if ($a == "mix") {
-        if ($sess == "pegawai" OR $sess == "pegawai") {
+        if ($sess == "pegawai" OR $sess == "pemilik") {
 
         }
         else{
