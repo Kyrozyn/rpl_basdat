@@ -140,6 +140,7 @@ cekRole("pemilik");
             echo "<script> alert('Data gagal dihapus'); window.location = window.location.href; </script>";
         }
     }
+    //untuk tambah
     if(ISSET($_POST['No_Pol'])){
         $No_Pol = $_POST['No_Pol'];
         $Merk = $_POST['Merk'];
