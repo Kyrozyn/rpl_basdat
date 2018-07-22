@@ -22,10 +22,9 @@ cekRole("pemilik");
         <h1 class="text-center">Data Sewa</h1>
         <br>
         <div class="col-sm-1">
-            <a href="peminjaman.php"><button type="button" class="btn btn-primary" data-toggle="modal">
-                Tambah Data (Sebagai Admin)
+            <a href="pengembalian.php"><button type="button" class="btn btn-primary" data-toggle="modal">
+                Form Pengembalian
             </button></a>
-            
         </div>
         <br>
         <table id="mobil" class="display table-striped table-bordered" style="width:100%">
@@ -67,7 +66,11 @@ cekRole("pemilik");
                 ?>
             </tbody>
         </table>
-        
+        <div class="col-sm-1">
+            <a href="peminjaman.php"><button type="button" class="btn btn-primary" data-toggle="modal">
+                Tambah Data (Sebagai Admin)
+            </button></a>
+        </div>
     </div>
     <!--end tengah!-->
 </div>
