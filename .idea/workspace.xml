@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="473d07b9-a010-4e50-a31c-7ed3033a205b" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pengembalian.php" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/admin.php" afterPath="$PROJECT_DIR$/admin.php" />
-      <change beforePath="$PROJECT_DIR$/pegawai.php" afterPath="$PROJECT_DIR$/pegawai.php" />
-      <change beforePath="$PROJECT_DIR$/peminjaman.php" afterPath="$PROJECT_DIR$/peminjaman.php" />
-      <change beforePath="$PROJECT_DIR$/setting/kiri.php" afterPath="$PROJECT_DIR$/setting/kiri.php" />
+      <change beforePath="$PROJECT_DIR$/pengembalian.php" afterPath="$PROJECT_DIR$/pengembalian.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -45,8 +40,8 @@
       <file leaf-file-name="pengembalian.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pengembalian.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="119" column="49" lean-forward="true" selection-start-line="119" selection-start-column="49" selection-end-line="119" selection-end-column="49" />
+            <state relative-caret-position="292">
+              <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -241,12 +236,12 @@
       <updated>1531747375165</updated>
       <workItem from="1531747377890" duration="10606000" />
       <workItem from="1531799473187" duration="23748000" />
-      <workItem from="1532236213489" duration="10042000" />
+      <workItem from="1532236213489" duration="10230000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58121000" />
+    <option name="totallyTimeSpent" value="58309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -677,8 +672,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pengembalian.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="119" column="49" lean-forward="true" selection-start-line="119" selection-start-column="49" selection-end-line="119" selection-end-column="49" />
+        <state relative-caret-position="292">
+          <caret line="66" column="52" lean-forward="true" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
           <folding />
         </state>
       </provider>
