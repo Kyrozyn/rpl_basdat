@@ -65,7 +65,7 @@ cekRole("mix");
                 $waktu_awall = strtotime($waktu_awal);
                 $datediff = time() - $waktu_awall;
                 $hari = round($datediff/(60*60*24));
-                $total_bayar = ($hargasewa*$hari)+$denda+($bayar_driver*$hari);
+                $total_bayar = ($hargasewa*$hari)+$denda;
 
             ?>
             <form action="" method="post">
