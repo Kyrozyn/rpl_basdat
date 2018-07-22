@@ -29,7 +29,7 @@
                         <span>Laporan</span>
                     </h6>
                     <div class="list-group text-left">
-                        <a class="list-group-item" href="#"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Laporan</a>
+                        <a class="list-group-item" href="laporan.php"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp; Laporan</a>
                     </div>
                     <?php }
                     else if ($role == "pegawai"){

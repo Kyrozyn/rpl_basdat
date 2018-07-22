@@ -19,14 +19,7 @@ cekRole("pemilik");
     <!--!-->
     <!-- Tengah !-->
     <div class="col-sm-10 text-left">
-        <h1 class="text-center">Data Sewa</h1>
-        <br>
-        <div class="col-sm-1">
-            <a href="peminjaman.php"><button type="button" class="btn btn-primary" data-toggle="modal">
-                Tambah Data (Sebagai Admin)
-            </button></a>
-            
-        </div>
+        <h1 class="text-center">Laporan Pengembalian</h1>
         <br>
         <table id="mobil" class="display table-striped table-bordered" style="width:100%">
             <thead>
@@ -38,12 +31,13 @@ cekRole("pemilik");
                 <th>ID Pelanggan</th>
                 <th>ID Driver</th>
                 <th>No Pegawai</th>
+                <th>Total Bayar</th>
                 <th>Aksi</th>
             </tr>
             </thead>
             <tbody>
                 <?php
-                $sewa = $db->select("sewa","*",["hapus" => false]);
+                $sewa = $db->select("sewa","*",["hapus" => true]);
                 foreach ($sewa as $s){
                     ?>
                     <tr>
@@ -54,11 +48,9 @@ cekRole("pemilik");
                         <td><?php echo $s['id_pelanggan']; ?></td>
                         <td><?php echo $s['id_driver']; ?></td>
                         <td><?php echo $s['no_pegawai']; ?></td>
+                        <td>Rp. <?php echo number_format($s['total_bayar'])?>,-</td>
                         <td>
-                            <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??')" style="padding-top: 13px">
-                                <input type="hidden" name="delete_kode" value="<?php echo $s['kode_sewa']; ?>">
-                                <button type="submit" class="btn btn-danger fa fa-trash-o"></button>
-                                <a href="detailsewa.php?kode_sewa=<?php echo $s['kode_sewa']; ?>" class="btn btn-primary fa fa-id-card-o"></a>
+                            <a href="detaillaporan.php?kode_sewa=<?php echo $s['kode_sewa']; ?>" class="btn btn-primary fa fa-id-card-o"></a>
                             </form>
                         </td>
                     </tr>
