@@ -71,7 +71,7 @@ print_r($driv);
             <tbody>
             <?php
             $mobil_sedang_disewa = $db->select("sewa","no_pol",["total_bayar" => null]);
-            if(!empty($mobil_sedang_disewa)){
+            if(!$db->count("sewa") == 0){
                 $kendaraan = $db->select("kendaraan",["No_Pol","Merk","Harga_Sewa"],["no_pol[!]" => $mobil_sedang_disewa]);
             }
             else{
@@ -107,7 +107,7 @@ print_r($driv);
         $driver_sedang_sewa = $db->select("sewa","id_driver",["total_bayar" => null]);
         $foo = print_r($driver_sedang_sewa,1);
         if($id_driver == "ya"){
-            if(empty($driv)){
+            if($db->count("sewa") == 0){
                 $rand = $db->select("driver","id_driver");
             }
             else{

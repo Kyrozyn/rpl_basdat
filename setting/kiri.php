@@ -39,7 +39,7 @@
                         </h6>
                         <div class="list-group text-left">
                             <a class="list-group-item" href="peminjaman.php"><i class="fa fa-key fa-fw" aria-hidden="true"></i>&nbsp; Peminjaman</a>
-                            <a class="list-group-item" href="pengembalian.php"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp; Pengembalian</a>
+                            <a class="list-group-item" href="mobil.php"><i class="fa fa-check fa-fw" aria-hidden="true"></i>&nbsp; Pengembalian</a>
                         </div>
                         <h6 class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted">
                             <span>Pengolahan Customer</span>

@@ -15,7 +15,7 @@ cekRole("pegawai");
     <!--!-->
     <!-- Tengah !-->
     <div class="col-sm-10 text-left">
-        <h1>Selamat datang di Bastian Rental Mobil</h1>
+        <h1>Welcome to kontoru site</h1>
         <p><?php print_r($_SESSION);?></p>
         <hr>
         <h3>Test</h3>
