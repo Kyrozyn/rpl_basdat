@@ -52,7 +52,7 @@ print_r($driv);
             </div>
             <div class="form-group">
                 <label for="waktu_awal">Tanggal Awal</label>
-                <input type="date" class="form-control" name="waktu_awal" value="<?php echo date("Y-m-d")?>">
+                <input type="date" class="form-control" name="waktu_awal">
             </div>
             <div class="form-group">
                 <label for="alamat">Tanggal Kembali</label>
