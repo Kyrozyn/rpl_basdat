@@ -116,10 +116,12 @@ print_r($driv);
         if(!$db->has("customer", ["id_pelanggan" => $id_pelanggan])){
             unset ($_POST);
             echo "<script>alert('Maaf, customer tidak ada!'); window.location = window.location.href;</script>";
+            die();
         }
         else if(!$db->has("kendaraan", ["no_pol" => $no_polisi])){
             unset ($_POST);
             echo "<script>alert('Maaf, kendaraan tidak ada!'); window.location = window.location.href;</script>";
+            die();
         }
         $data =
             [
