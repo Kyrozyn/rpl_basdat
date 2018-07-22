@@ -1,6 +1,7 @@
 <?php
 include "setting/head.php";
 include "setting/cekredirect.php";
+error_reporting(0);
 echo "role = " . $_SESSION['role'] . "<br>";
 cekRole("mix");
 $count = $count = $db->count("sewa");
