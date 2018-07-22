@@ -23,4 +23,5 @@ return array(
     'Cloudinary\\PreloadedFile' => $vendorDir . '/cloudinary/cloudinary_php/src/PreloadedFile.php',
     'Cloudinary\\Search' => $vendorDir . '/cloudinary/cloudinary_php/src/Search.php',
     'Cloudinary\\Uploader' => $vendorDir . '/cloudinary/cloudinary_php/src/Uploader.php',
+    'FPDF' => $vendorDir . '/setasign/fpdf/fpdf.php',
 );

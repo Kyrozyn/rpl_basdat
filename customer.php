@@ -3,6 +3,7 @@ include "setting/head.php";
 include "setting/cekredirect.php";
 echo "role = " . $_SESSION['role'] . "<br>";
 cekRole("mix");
+$count = $db->count("customer");
 ?>
 <script>
     $(document).ready(function() {
@@ -78,7 +79,7 @@ cekRole("mix");
             <div class="modal-body text-left">
                 <div class="form-group">
                     <label for="id_pelanggan">ID Pelanggan</label>
-                    <input type="text" class="form-control" name="id_pelanggan">
+                    <input type="text" class="form-control" name="id_pelanggan" value="<?php echo sprintf('%05d',$count+1) ?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="nama">Nama Pelanggan</label>

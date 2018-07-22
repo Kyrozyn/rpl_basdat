@@ -5,6 +5,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/catfan/medoo" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/cloudinary/cloudinary_php" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/setasign/fpdf" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -14,11 +15,13 @@
           <root url="file://$MODULE_DIR$/vendor/catfan/medoo" />
           <root url="file://$MODULE_DIR$/vendor/cloudinary/cloudinary_php" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/setasign/fpdf" />
         </CLASSES>
         <SOURCES>
           <root url="file://$MODULE_DIR$/vendor/catfan/medoo" />
           <root url="file://$MODULE_DIR$/vendor/cloudinary/cloudinary_php" />
           <root url="file://$MODULE_DIR$/vendor/composer" />
+          <root url="file://$MODULE_DIR$/vendor/setasign/fpdf" />
         </SOURCES>
       </library>
     </orderEntry>

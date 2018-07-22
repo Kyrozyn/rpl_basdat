@@ -3,6 +3,7 @@ include "setting/head.php";
 include "setting/cekredirect.php";
 echo "role = " . $_SESSION['role'] . "<br>";
 cekRole("pemilik");
+$count = $db->count("driver");
 ?>
 <script>
     $(document).ready(function() {
@@ -33,7 +34,7 @@ cekRole("pemilik");
             </thead>
             <tbody>
                 <?php
-                $driver = $db->select("driver","*",["hapus" => false]);
+                $driver = $db->select("driver","*");
                 foreach ($driver as $d){
                     ?>
                     <tr>
@@ -76,7 +77,7 @@ cekRole("pemilik");
             <div class="modal-body text-left">
                 <div class="form-group">
                     <label for="id_driver">ID Driver</label>
-                    <input type="text" class="form-control" name="id_driver">
+                    <input type="text" class="form-control" name="id_driver" value="<?php echo sprintf('%05d',$count+1) ?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="nama">Nama Driver</label>
@@ -112,7 +113,7 @@ cekRole("pemilik");
 <?php
 //untuk hapus
     if(ISSET($_POST['delete_driver'])){
-        $hapus = $db->update("driver",["hapus" => true],["id_driver" => $_POST['delete_driver']]);
+        $hapus = $db->delete("driver",["id_driver" => $_POST['delete_driver']]);
         if($hapus) {
             unset ($_POST['delete_driver']);
             echo "<script> alert('Data berhasil dihapus'); window.location = window.location.href;</script>";

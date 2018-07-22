@@ -3,6 +3,7 @@ include "setting/head.php";
 include "setting/cekredirect.php";
 echo "role = " . $_SESSION['role'] . "<br>";
 cekRole("pemilik");
+$count = $db->count("pegawai");
 ?>
 <script>
     $(document).ready(function() {
@@ -28,6 +29,7 @@ cekRole("pemilik");
                 <th>Alamat</th>
                 <th>Tgl Lahir (yy/mm/dd)</th>
                 <th>Nomor Telepon</th>
+                <th>Password</th>
                 <th>Aksi</th>
             </tr>
             </thead>
@@ -35,6 +37,8 @@ cekRole("pemilik");
                 <?php
                 $pegawai = $db->select("pegawai","*",["hapus" => false]);
                 foreach ($pegawai as $p){
+                    $no_pegawai = $p['no_pegawai'];
+                    $pw = $db->get("login","pw",["username" => $no_pegawai]);
                     ?>
                     <tr>
                         <td><?php echo $p['no_pegawai']; ?></td>
@@ -42,6 +46,7 @@ cekRole("pemilik");
                         <td><?php echo $p['alamat']; ?></td>
                         <td><?php echo $p['tgl_lahir'];?></td>
                         <td><?php echo $p['no_telp']; ?></td>
+                        <td><?php echo  $pw;?></td>
                         <td>
                             <form method="post" accept-charset="utf-8" action="" onsubmit="return confirm('Apakah anda yakin ingin menghapus data ini??');" style="padding-top: 13px">
                                 <input type="hidden" name="delete_pegawai" value="<?php echo $p['no_pegawai']; ?>">
@@ -76,7 +81,7 @@ cekRole("pemilik");
             <div class="modal-body text-left">
                 <div class="form-group">
                     <label for="no_pegawai">Nomor Pegawai</label>
-                    <input type="text" class="form-control" name="no_pegawai">
+                    <input type="text" class="form-control" name="no_pegawai" value="<?php echo sprintf('%05d',$count+1) ?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="nama">Nama Pegawai</label>
@@ -134,10 +139,18 @@ cekRole("pemilik");
                 "tgl_lahir"=>$tgl_lahir,
                 "no_telp"=>$no_telp
             ];
+        $pw = explode(" ", strtolower($nama));
+        $password = $pw[0].$no_pegawai;
+        $data_untuk_akun = [
+                "username" => $no_pegawai,
+                "pw" => $password,
+                "role" => "pegawai"
+        ];
         $Masuk = $db->insert("pegawai", $data);
+        $Masuk2 = $db->insert("login", $data_untuk_akun);
         if($Masuk) {
             unset ($_POST);
-            echo "<script> alert('Data berhasil ditambahkan!'); window.location = window.location.href;</script>";
+            echo "<script> alert('Data berhasil ditambahkan! Password untuk login : $pw[0]'); window.location = window.location.href;</script>";
         }
         else {
             unset ($_POST);

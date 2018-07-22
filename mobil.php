@@ -36,7 +36,7 @@ cekRole("pemilik");
             </thead>
             <tbody>
                 <?php
-                $kendaraan = $db->select("kendaraan","*",["hapus" => false]);
+                $kendaraan = $db->select("kendaraan","*");
                 foreach ($kendaraan as $kd){
                     ?>
                     <tr>
@@ -130,7 +130,7 @@ cekRole("pemilik");
 <?php
 //untuk hapus
     if(ISSET($_POST['delete_nopol'])){
-        $hapus = $db->update("kendaraan",["hapus" => true],["No_Pol" => $_POST['delete_nopol']]);
+        $hapus = $db->delete("kendaraan",["No_Pol" => $_POST['delete_nopol']]);
         if($hapus) {
             unset ($_POST['delete_nopol']);
             echo "<script> alert('Data berhasil dihapus'); window.location = window.location.href;</script>";

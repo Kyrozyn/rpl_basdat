@@ -2,7 +2,7 @@
 include "setting/head.php";
 include "setting/cekredirect.php";
 echo "role = " . $_SESSION['role'] . "<br>";
-cekRole("pemilik");
+cekRole("mix");
 if(ISSET($_GET['id_pelanggan'])){
     $id_pelanggan = $_GET['id_pelanggan'];
     $nama = $db->get("customer","nama",["id_pelanggan" => $id_pelanggan]);

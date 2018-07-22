@@ -11,6 +11,7 @@
   ],
   "require": {
     "catfan/medoo": "v1.5.7",
-    "cloudinary/cloudinary_php": "1.10.0"
+    "cloudinary/cloudinary_php": "1.10.0",
+    "setasign/fpdf": "1.8.1"
   }
 }
