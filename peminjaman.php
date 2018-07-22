@@ -51,6 +51,10 @@ print_r($driv);
                 <input type="text" class="form-control" name="no_polisi">
             </div>
             <div class="form-group">
+                <label for="waktu_awal">Tanggal Awal</label>
+                <input type="date" class="form-control" name="waktu_awal" value="<?php echo date("Y-m-d")?>">
+            </div>
+            <div class="form-group">
                 <label for="alamat">Tanggal Kembali</label>
                 <input type="date" class="form-control" name="waktu_kesepakatan">
             </div>
@@ -122,6 +126,7 @@ print_r($driv);
         else{
             $driver = null;
         }
+        $waktu_awal = $_POST['waktu_awal'];
         $waktu_kesepakatan = $_POST['waktu_kesepakatan'];
         $no_polisi = $_POST['no_polisi'];
         $no_pegawai = $_SESSION['username'];
@@ -138,7 +143,7 @@ print_r($driv);
         $data =
             [
                 "kode_sewa" => $id_peminjaman,
-                "waktu_awal" => \Medoo\Medoo::raw("NOW()"),
+                "waktu_awal" => $waktu_awal,
                 "waktu_akhir" => null,
                 "waktu_kesepakatan" => $waktu_kesepakatan,
                 "total_bayar" => null,

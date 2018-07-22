@@ -109,7 +109,8 @@ cekRole("mix");
                     </div>
                     <div class="form-group">
                         <label for="ket">Total Bayar</label>
-                        <input type="text" class="form-control" name="total_bayar" value="Rp. <?php echo number_format($total_bayar)?>,-"  readonly>
+                        <input type="text" class="form-control" name="total_bayar2" value="Rp. <?php echo number_format($total_bayar)?>,-"  readonly>
+                        <input type="hidden" name="total_bayar" value="<?php echo $total_bayar?>">
                     </div>
                 </div>
     </form>
