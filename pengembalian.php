@@ -46,11 +46,9 @@ cekRole("mix");
             $id_driver = $db->get("sewa","id_driver",["kode_sewa" => $kode_sewa]);
             if(empty($id_driver)){
                 $driver = "Tidak ada driver";
-                $bayar_driver = 0;
             }
             else{
                 $driver = $db->get("driver","nama",["id_driver" => $id_driver]);
-                $bayar_driver = 100000;
             }
             if($waktu_kesepakatan>=$waktu_akhir) {
                 $telat = "Tidak Telat";
